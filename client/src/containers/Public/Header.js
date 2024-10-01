@@ -7,12 +7,12 @@ import { path } from "../../utils/constant";
 
 const { AiOutlinePlusCircle } = icons;
 
-const Header = () => {
-    const navigate = useNavigate();
+const Header = ({ onLoginClick }) => {
+    // const navigate = useNavigate();
 
-    const goLogin = useCallback(() => {
-        navigate(path.LOGIN);
-    }, []);
+    // const goLogin = useCallback(() => {
+    //     navigate(path.LOGIN);
+    // }, [navigate]);
 
     return (
         <div className={'w-1100 flex items-center justify-between'}>
@@ -27,13 +27,12 @@ const Header = () => {
                     text={'Register'}
                     textColor='text-white'
                     bgColor='bg-[#3961fb]'
-                    onClick={goLogin}
                 />
                 <Button
                     text={'Login'}
                     textColor='text-white'
                     bgColor='bg-[#3961fb]'
-                    onClick={goLogin}
+                    onClick={onLoginClick}
                 />
                 <Button
                     text={'Post new'}
