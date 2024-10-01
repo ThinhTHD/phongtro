@@ -27,9 +27,10 @@ export default function App() {
 
   return (
     <div className="h-screen w-screen bg-primary">
-      <Header onLoginClick={handleLoginClick} />
-      <Home />
-      {showLogin && <Login />}
+      <div className="w-1100 mx-auto">
+        <Header onLoginClick={handleLoginClick} />
+        {showLogin && <Login />}
+      </div>
     </div>
   )
 }
